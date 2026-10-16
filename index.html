@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>শিক্ষক সহায়ক – অ্যাপ ডাউনলোড</title>
+<meta name="theme-color" content="#0b0f1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700&family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0f1a; --txt:#f4f6fb; --sub:#9aa6c4;
+    --blue:#2f7cff; --violet:#7b5cff; --glow:rgba(79,110,255,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f3f5fa; --txt:#111827; --sub:#5b6478; --glow:rgba(79,110,255,.25); }
+  }
+  *{box-sizing:border-box;margin:0}
+  html,body{height:100%}
+  body{
+    background:var(--bg); color:var(--txt);
+    font-family:'Noto Sans Bengali','Nirmala UI',system-ui,sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px; position:relative; overflow:hidden;
+  }
+  body::before{
+    content:""; position:absolute; width:560px; height:560px; border-radius:50%;
+    background:radial-gradient(circle, var(--glow), transparent 68%);
+    top:50%; left:50%; transform:translate(-50%,-62%); pointer-events:none;
+  }
+  main{position:relative; text-align:center; width:100%; max-width:360px}
+
+  .icon{
+    width:132px; height:132px; margin:0 auto 28px; border-radius:32px;
+    background:linear-gradient(145deg,var(--blue),var(--violet));
+    display:grid; place-items:center;
+    box-shadow:0 22px 50px -12px rgba(79,92,255,.6);
+  }
+  .icon svg{width:70px; height:70px}
+
+  h1{
+    font-family:'Noto Serif Bengali','Nirmala UI',serif;
+    font-weight:700; font-size:clamp(2.2rem,9vw,2.9rem); line-height:1.25;
+    margin-bottom:10px;
+  }
+  .sub{color:var(--sub); font-size:1rem; margin-bottom:34px}
+
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    width:100%; padding:17px 24px; border-radius:16px;
+    background:linear-gradient(135deg,var(--blue),var(--violet));
+    color:#fff; text-decoration:none; font-weight:600; font-size:1.15rem;
+    box-shadow:0 14px 30px -10px rgba(79,92,255,.7);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(79,92,255,.8)}
+  .btn:active{transform:translateY(0)}
+  .btn:focus-visible{outline:3px solid #fff; outline-offset:3px}
+  .btn svg{width:24px; height:24px; flex:none}
+  .meta{margin-top:16px; color:var(--sub); font-size:.88rem}
+
+  @media (prefers-reduced-motion: reduce){ .btn{transition:none} }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon" aria-hidden="true">
+    <!-- অ্যাপ আইকন: খোলা বই + টিক চিহ্ন (পাতলা লাইন) -->
+    <svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M32 18c-5-3.5-12-4.5-20-3.5v30c8-1 15 0 20 3.5 5-3.5 12-4.5 20-3.5v-30c-8-1-15 0-20 3.5z"/>
+      <path d="M32 18v30"/>
+      <path d="M38 29l4 4 7-8" stroke-width="3.2"/>
+    </svg>
+  </div>
+
+  <h1>শিক্ষক সহায়ক</h1>
+  <p class="sub">শিক্ষকের প্রতিদিনের কাজের সহজ সঙ্গী</p>
+
+  <!-- নিচের লিংকে APK ফাইলের নাম আপনার ফাইলের নামের সাথে মিলিয়ে নিন -->
+  <a class="btn" href="shikkhok-sohayok.apk" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12"/><path d="M7 10.5l5 5 5-5"/><path d="M4 20h16"/>
+    </svg>
+    ডাউনলোড করুন
+  </a>
+  <p class="meta">অ্যান্ড্রয়েড ফোনের জন্য</p>
+</main>
+</body>
+</html>
